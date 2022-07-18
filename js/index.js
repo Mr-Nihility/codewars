@@ -82,3 +82,91 @@
 // console.log(order("4of Fo1r pe6ople g3ood th5e the2")); //"Fo1r the2 g3ood 4of th5e pe6ople"
 
 // console.log(order("")); // ''-> '' ,"empty input should return empty string"
+
+//4 (6куев)
+// Funny Dots
+// You will get two integers n (width) and m (height) and your task is to draw the following pattern. Each line is seperated with a newline (\n)
+
+// Both integers are equal or greater than 1; no need to check for invalid parameters.
+
+// Examples
+
+//                                             +---+---+---+
+//              +---+                          | o | o | o |
+// dot(1, 1) => | o |            dot(3, 2) =>  +---+---+---+
+//              +---+                          | o | o | o |
+//                                             +---+---+---+
+// function dot(n, m) {
+//   let upperStr = "";
+//   let bodyStr = "";
+//   //width
+//   for (let i = 0; i < n; i += 1) {
+//     upperStr += "---+";
+//     bodyStr += " o |";
+//   }
+
+//   let w = `+${upperStr}\n|${bodyStr}\n`;
+//   let res = "";
+//   //heigth
+//   for (let j = 0; j < m; j++) {
+//     res += w;
+//   }
+
+//   return `${res}+${upperStr}`;
+// }
+// console.log(dot(1, 1));
+
+// console.log(dot(3, 2));
+// console.log(dot(14, 7));
+``;
+
+//                                      00-00..00-00
+//                               0000--0000....0000--0000
+//                         000000---000000......000000---000000
+//                    00000000----00000000........00000000----00000000
+//             0000000000-----0000000000..........0000000000-----0000000000
+//       000000000000------000000000000............000000000000------000000000000
+// 00000000000000-------00000000000000..............00000000000000-------00000000000000
+
+//5 (8kuy)
+// If you can't sleep, just count sheep!!
+
+// Task:
+// Given a non - negative integer, 3 for example,
+//  return a string with a murmur: "1 sheep...2 sheep...3 sheep...".Input will always be valid, i.e.no negative integers.
+
+// var countSheep = function (num) {
+//   let res = "";
+//   for (let i = 1; i <= num; i++) {
+//     res += `${i} sheep...`;
+//   }
+
+//   return res ? res : "";
+//   //your code here
+// };
+
+// console.log(countSheep(0));
+// console.log(countSheep(3)); //
+
+//6 (5kyi)
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+// moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0
+
+// function moveZeros(arr) {
+//   let cutArr = [];
+//   for (let i = 0; i <= arr.length; i++) {
+//     if (arr[i] === 0) {
+//       let cut = arr.splice(i, 1);
+//       cutArr.push(...cut);
+//       // i--;
+//     }
+//   }
+
+//   return arr.concat(cutArr);
+// }
+
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1])); // [1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
+// console.log(
+//   moveZeros([9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0])
+// );
