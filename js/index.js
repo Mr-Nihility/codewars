@@ -170,3 +170,94 @@
 // console.log(
 //   moveZeros([9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0])
 // );
+
+// function pigIt(str) {
+//   const arrFromStr = str.split(" ");
+//   const newArr = [];
+//   for (let i = 0; i < arrFromStr.length; i++) {
+//     if (arrFromStr[i] === "!" || arrFromStr[i] === "?") {
+//       newArr.push(arrFromStr[i]);
+//       continue;
+//     }
+//     let elem = arrFromStr[i].split("");
+//     const firstChar = elem.shift();
+//     elem.push(firstChar);
+//     elem = elem.join("") + "ay";
+//     newArr.push(elem);
+//   }
+//   return newArr.join(" ");
+// }
+
+// console.log(pigIt("Pig latin is cool")); //, "igPay atinlay siay oolcay"
+// console.log(pigIt("This is my string")); // 'hisTay siay ymay tringsay'
+// console.log(pigIt("Hello world !"));
+
+// function formatDuration(seconds) {
+//   let s = seconds % 60;
+//   let m = Number.parseInt(seconds / 60) % 60;
+//   let h = Number.parseInt(seconds / 3600) % 24;
+//   let d = Number.parseInt(seconds / 86400) % 365;
+//   let y =
+//     seconds / (86400 * 365) > 1
+//       ? Number.parseInt(seconds / (86400 * 365)) % 365
+//       : null;
+
+//   let res = "";
+//   if (s) {
+//     s === 1 ? (res = `${s} second`) : (res = `${s} seconds`);
+//   }
+//   if (m) {
+//     if (res) {
+//       res.length > 11 ? (res = ", " + res) : (res = " and " + res);
+//     }
+//     m === 1 ? (res = `${m} minute` + res) : (res = `${m} minutes` + res);
+//   }
+//   if (h) {
+//     if (res) {
+//       res.length > 11 ? (res = ", " + res) : (res = " and " + res);
+//     }
+
+//     h === 1 ? (res = `${h} hour` + res) : (res = `${h} hours` + res);
+//   }
+//   if (d) {
+//     if (res) {
+//       res.length > 11 ? (res = ", " + res) : (res = " and " + res);
+//     }
+//     d === 1 ? (res = `${d} day` + res) : (res = `${d} days` + res);
+//   }
+//   if (y) {
+//     if (res) {
+//       res.length > 11 ? (res = ", " + res) : (res = " and " + res);
+//     }
+//     y === 1 ? (res = `${y} year` + res) : (res = `${y} years` + res);
+//   }
+
+//   if (res === "") {
+//     res = "now";
+//   }
+//   return res;
+// }
+
+// console.log(formatDuration(1)); // "1 second");
+// console.log(formatDuration(62)); // "1 minute and 2 seconds");
+// console.log(formatDuration(120)); // "2 minutes");
+// console.log(formatDuration(3600)); // "1 hour");
+// console.log(formatDuration(3662)); // "1 hour, 1 minute and 2 seconds")
+// console.log(formatDuration(36621));
+// console.log(formatDuration(""));
+
+// function solution(str) {
+//   const arrFromStr = str.split("");
+//   const res = [];
+//   arrFromStr.forEach((el, i, arr) => {
+//     if (i % 2 === 0) {
+//       let str = [el, arr[i + 1] ? arr[i + 1] : "_"];
+//       res.push(str);
+//     }
+//   });
+//   return res.flat();
+// }
+
+// console.log(solution("abcdef")); // ["ab", "cd", "ef"];
+// console.log(solution("abcdefg")); // ["ab", "cd", "ef", "g_"];
+// console.log(solution("")); // []);
