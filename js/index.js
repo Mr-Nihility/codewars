@@ -296,7 +296,7 @@
 // console.log(reverseWords("a b c d")); //, 'a b c d');
 // console.log(reverseWords("double  spaced  words")); //, 'elbuod  decaps  sdrow');
 
-// ргб ту хекс
+// DONE
 // function rgb(r, g, b) {
 //   // complete this function
 
@@ -324,3 +324,207 @@
 // console.log(rgb(173, 255, 47)); //, "ADFF2F";
 // console.log(rgb(199, 145, 7)); //, "ADFF2F";
 // // 199,145,7
+
+///DONE
+
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+
+// Courtesy of projecteuler.net (Problem 1)
+
+// function solution(number) {
+//   let sum = 0;
+//   for (let i = 1; i < number; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       sum += i;
+//     }
+
+//   }
+
+//   return sum;
+// }
+
+// console.log(solution(20)); //23
+
+///done
+//
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+// function getCount(str) {
+//   let count = 0;
+//   str.split("").forEach((el) => {
+//     if (el === "a" || el === "e" || el === "i" || el === "o" || el === "u") {
+//       count += 1;
+//     }
+//   });
+//   return count;
+// }
+
+// console.log(getCount("abracadabra")); // , 5;
+
+//DONE
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+// function squareSum(numbers) {
+//   let sum = 0;
+//   numbers.forEach((num) => {
+//     sum += num ** 2;
+//   });
+//   return sum;
+// }
+
+// console.log(squareSum([1, 2])); //, 5);
+// console.log(squareSum([0, 3, 4, 5])); //, 50);
+// console.log(squareSum([])); //, 0);
+
+/**
+ * ЗДЕЛАНО
+ * Story
+YouTube had a like and a dislike button, which allowed users to express their opinions about particular content. It was set up in such a way that you cannot like and dislike a video at the same time. There are two other interesting rules to be noted about the interface: Pressing a button, which is already active, will undo your press. If you press the like button after pressing the dislike button, the like button overwrites the previous "Dislike" state. The same is true for the other way round.
+
+Task
+Create a function that takes in a list of button inputs and returns the final state.
+
+Examples
+likeOrDislike([Dislike]) => Dislike
+likeOrDislike([Like,Like]) => Nothing
+likeOrDislike([Dislike,Like]) => Like
+likeOrDislike([Like,Dislike,Dislike]) => Nothing
+Notes
+If no button is currently active, return Nothing.
+If the list is empty, return Nothing.
+ */
+// Like, Dislike, Nothing come from Preloaded
+
+// function likeOrDislike(buttons) {
+//   if (buttons.length === 0) {
+//     return "Nothing";
+//   } else if (buttons.length === 1) {
+//     return buttons[0];
+//   }
+//   let res = buttons[0];
+//   for (let i = 1; i < buttons.length; i++) {
+//     if (res === buttons[i]) {
+//       res = "Nothing";
+//     } else {
+//       res = buttons[i];
+//     }
+//   }
+//   return res;
+// }
+
+// console.log(likeOrDislike(["Dislike"])); //, Dislike );
+// console.log(likeOrDislike(["Like", "Like"])); //, Nothing );
+// console.log(likeOrDislike(["Dislike", "Like"])); //, Like );
+// console.log(likeOrDislike(["Like", "Dislike", "Dislike"])); //, Nothing );
+
+// console.log(likeOrDislike(["Dislike", "Dislike"])); //, Nothing );
+// console.log(likeOrDislike(["Like", "Like", "Like"])); //, Like );
+// console.log(likeOrDislike(["Like", "Dislike"])); //, Dislike );
+// console.log(likeOrDislike(["Dislike", "Like", "Dislike"])); //, Dislike );
+// // console.log(
+//   likeOrDislike([
+//     "Like",
+//     "Like",
+//     "Dislike",
+//     "Like",
+//     "Like",
+//     "Like",
+//     "Like",
+//     "Dislike",
+//   ])
+// ); //, Dislike );
+// console.log(likeOrDislike([])); //, Nothing );
+
+/**
+ *
+ * 
+ * What's in a name?
+..Or rather, what's a name in? For us, a particular string is where we are looking for a name.
+
+Task
+Write a function, taking two strings in parameter, that tests whether or not the first string contains all of the letters of the second string, in order.
+
+The function should return true if that is the case, and else false. Letter comparison should be case-INsensitive.
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+// function nameInStr(str, name) {
+//   const nameCharsArr = name.split("");
+//   const strArr = str.split("");
+//   for (let i = 0; i < nameCharsArr.length; i++) {
+//     const elName = nameCharsArr[i];
+
+//     for (let j = 0; j < strArr.length; j++) {
+//       console.log(strArr.lastIndexOf(elName) > j);
+//       if (strArr.lastIndexOf(elName) > j) {
+//       } else {
+//         return false;
+//       }
+//       return true;
+//     }
+//   }
+// }
+
+// console.log(nameInStr("Across the rivers", "chris")); //, true);
+// console.log(nameInStr("Next to a lake", "chris")); //, false);
+// console.log(nameInStr("Under a sea", "chris")); //, false);
+// console.log(nameInStr("A crew that boards the ship", "chris")); //, false);
+// console.log(nameInStr("A live son", "Allison")); //, false);
+
+//DONE
+// function digitize(n) {
+//   return [...String(n)].reverse();
+// }
+// console.log(digitize(35231)); //, [1, 3, 2, 5, 3]);
+// console.log(digitize(0)); //, [0]);
+
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
+function likes(names) {
+  let message = "";
+  if (!names.length) {
+    message += "no one likes this";
+  }
+  if (names.length === 1) {
+    message += names[0] + " likes this";
+  }
+  if (names.length > 1 && names.length <= 3) {
+    message += names.join(" and ") + " like this";
+  }
+  if (names.length === 3) {
+    message = message.replace(" and ", ", ");
+  }
+  if (names.length > 3) {
+    message +=
+      names.slice(0, 2).join(", ") +
+      ` and ${names.length - 2} others like this`;
+  }
+  return message;
+}
+
+console.log(likes([])); //, "no one likes this");
+console.log(likes(["Peter"])); //, "Peter likes this");
+console.log(likes(["Jacob", "Alex"])); //, "Jacob and Alex like this");
+console.log(likes(["Max", "John", "Mark"])); //,"Max, John and Mark like this"
+
+console.log(likes(["Alex", "Jacob", "Mark", "Max"])); //,"Alex, Jacob and 2 others like this"
