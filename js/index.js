@@ -490,6 +490,7 @@ The function should return true if that is the case, and else false. Letter comp
 // console.log(digitize(35231)); //, [1, 3, 2, 5, 3]);
 // console.log(digitize(0)); //, [0]);
 
+//DONE
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
@@ -500,31 +501,142 @@ The function should return true if that is the case, and else false. Letter comp
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
-function likes(names) {
-  let message = "";
-  if (!names.length) {
-    message += "no one likes this";
-  }
-  if (names.length === 1) {
-    message += names[0] + " likes this";
-  }
-  if (names.length > 1 && names.length <= 3) {
-    message += names.join(" and ") + " like this";
-  }
-  if (names.length === 3) {
-    message = message.replace(" and ", ", ");
-  }
-  if (names.length > 3) {
-    message +=
-      names.slice(0, 2).join(", ") +
-      ` and ${names.length - 2} others like this`;
-  }
-  return message;
-}
+// function likes(names) {
+//   let message = "";
+//   if (!names.length) {
+//     message += "no one likes this";
+//   }
+//   if (names.length === 1) {
+//     message += names[0] + " likes this";
+//   }
+//   if (names.length > 1 && names.length <= 3) {
+//     message += names.join(" and ") + " like this";
+//   }
+//   if (names.length === 3) {
+//     message = message.replace(" and ", ", ");
+//   }
+//   if (names.length > 3) {
+//     message +=
+//       names.slice(0, 2).join(", ") +
+//       ` and ${names.length - 2} others like this`;
+//   }
+//   return message;
+// }
 
-console.log(likes([])); //, "no one likes this");
-console.log(likes(["Peter"])); //, "Peter likes this");
-console.log(likes(["Jacob", "Alex"])); //, "Jacob and Alex like this");
-console.log(likes(["Max", "John", "Mark"])); //,"Max, John and Mark like this"
+// console.log(likes([])); //, "no one likes this");
+// console.log(likes(["Peter"])); //, "Peter likes this");
+// console.log(likes(["Jacob", "Alex"])); //, "Jacob and Alex like this");
+// console.log(likes(["Max", "John", "Mark"])); //,"Max, John and Mark like this"
 
-console.log(likes(["Alex", "Jacob", "Mark", "Max"])); //,"Alex, Jacob and 2 others like this"
+// console.log(likes(["Alex", "Jacob", "Mark", "Max"])); //,"Alex, Jacob and 2 others like this"
+
+// function deleteNth(arr, n) {
+//   const obj = {};
+
+//   arr.forEach((el) => {
+//     obj[el] ? (obj[el] += 1) : (obj[el] = 1);
+//   });
+
+//   const keys = Object.keys(obj);
+
+// }
+
+// console.log(deleteNth([20, 37, 20, 21], 1)); //, [20, 37, 21];
+// console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2, 2], 3)); //, [1, 1, 3, 3, 7, 2, 2, 2];
+
+// function array(arr) {
+//   //Good luck
+//   const arr1 = arr.split(",");
+//   if (arr1.length <= 2) {
+//     return null;
+//   } else {
+//     return arr1
+//       .slice(1, arr1.length - 1)
+//       .join(" ")
+//       .trim();
+//   }
+// }
+
+// console.log(array("1,2,3")); //, '2');
+// console.log(array("1,2,3,4")); //, '2 3');
+// console.log(array("1,2,3,4,5")); //, '2 3 4');
+
+// console.log(array("")); //, null);
+// console.log(array("1")); //, null);
+// // console.log(array("1,2")); //, null);
+// Build Tower
+// Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
+
+// For example, a tower with 3 floors looks like this:
+/**
+ * 
+ * [
+  "  *  ",
+  " *** ", 
+  "*****"
+]
+ */
+
+// function towerBuilder(nFloors) {
+//   // build here
+// }
+// towerBuilder(1), ["*"];
+// towerBuilder(2), [" * ", "***"];
+// towerBuilder(3), ["  *  ", " *** ", "*****"];
+
+//done
+// function countPositivesSumNegatives(input) {
+//   // your code here
+//   if (!input) return [0, 0];
+//   return input.reduce(
+//     (acc, item) => {
+//       if (item > 0) {
+//         acc[0] += 1;
+//       } else {
+//         acc[1] += item;
+//       }
+//       return acc;
+//     },
+//     [0, 0]
+//   );
+// }
+// let testData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+// let actual = countPositivesSumNegatives(testData);
+// console.log(actual);
+// let testData1 = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
+// let actual1 = countPositivesSumNegatives(testData1);
+// console.log(actual1);
+// console.log(countPositivesSumNegatives([]));
+// console.log(countPositivesSumNegatives([0, 0]));
+
+// function isAN(value) {
+//   if (Array.isArray(value)) {
+//     return false;
+//   }
+//   if (typeof +value === "number") {
+//     return !Number.isNaN(+value);
+//   }
+// }
+
+// console.log(isAN(new Number(1)));
+// console.log(isAN(new Number("a")));
+// console.log(+new Number(1));
+// console.log(isAN([]));
+// console.log(isAN(true));
+
+// String.prototype.isUpperCase = function () {
+//   return this.split(" ").every((el) => el === el.toUpperCase());
+// };
+// console.dir(String);
+
+// const a = "CASe".isUpperCase();
+// console.log(a);
+
+// function toCamelCase(str) {
+//   return str.split("-" || "_");
+// }
+
+// console.log(toCamelCase("")); //, '', "An empty string was provided but not returned"
+// console.log(toCamelCase("the_stealth_warrior")); //, "theStealthWarrior", "toCamelCase'the_stealth_warrior'
+// console.log(toCamelCase("The-Stealth-Warrior")); //, "TheStealthWarrior", "toCamelCase'The-Stealth-Warrior'
+// console.log(toCamelCase("A-B-C")); //, "ABC", "toCamelCase('A-B-C') did not return correct value"
