@@ -262,22 +262,35 @@
 // console.log(solution("abcdefg")); // ["ab", "cd", "ef", "g_"];
 // console.log(solution("")); // []);
 
-// function nextPrime(n) {
-//   n++;
-//   for (let i = n; i >= 0; i++) {
-//     if ((i % i === 0 && i !== 1) || i / 2 !== 1) {
-//       return i;
-//     }
+function nextPrime(n) {
+  n++;
+  for (let i = n; i >= 0; i++) {
+    if (i % i === 0 && i !== 1 && n === i) {
+      return i;
+    }
 
-//     if (i > 100000) return;
-//   }
+    if (i > 100000) return;
+  }
+}
+
+console.log(nextPrime(0)); //, 2);
+console.log(nextPrime(1)); //, 2);
+console.log(nextPrime(2)); //, 3);
+console.log(nextPrime(3)); //, 5);
+console.log(nextPrime(5)); //, 7);
+console.log(nextPrime(11)); //, 13);
+console.log(nextPrime(17)); //, 19);
+console.log(nextPrime(2971)); //, 2999);
+
+// function reverseWords(str) {
+//   const arrFromStr = str
+//     .split(" ")
+//     .map((item) => item.split("").reverse().join(""))
+//     .join(" ");
+//   return arrFromStr;
 // }
 
-// console.log(nextPrime(0)); //, 2);
-// console.log(nextPrime(1)); //, 2);
-// console.log("aa", nextPrime(2)); //, 3);
-// console.log("aa", nextPrime(3)); //, 5);
-// console.log(nextPrime(5)); //, 7);
-// console.log(nextPrime(11)); //, 13);
-// console.log(nextPrime(17)); //, 19);
-// console.log(nextPrime(2971)); //, 2999);
+// console.log(reverseWords("The quick brown fox jumps over the lazy dog.")); //, 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+// console.log(reverseWords("apple")); //, 'elppa');
+// console.log(reverseWords("a b c d")); //, 'a b c d');
+// console.log(reverseWords("double  spaced  words")); //, 'elbuod  decaps  sdrow');
