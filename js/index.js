@@ -262,25 +262,26 @@
 // console.log(solution("abcdefg")); // ["ab", "cd", "ef", "g_"];
 // console.log(solution("")); // []);
 
-function nextPrime(n) {
-  n++;
-  for (let i = n; i >= 0; i++) {
-    if (i % i === 0 && i !== 1 && n === i) {
-      return i;
-    }
+//  НЕ РЕШЕНО
+// function nextPrime(n) {
+//   n++;
+//   for (let i = n; i >= 0; i++) {
+//     if (i % i === 0 && i !== 1 && n === i) {
+//       return i;
+//     }
 
-    if (i > 100000) return;
-  }
-}
+//     if (i > 100000) return;
+//   }
+// }
 
-console.log(nextPrime(0)); //, 2);
-console.log(nextPrime(1)); //, 2);
-console.log(nextPrime(2)); //, 3);
-console.log(nextPrime(3)); //, 5);
-console.log(nextPrime(5)); //, 7);
-console.log(nextPrime(11)); //, 13);
-console.log(nextPrime(17)); //, 19);
-console.log(nextPrime(2971)); //, 2999);
+// console.log(nextPrime(0)); //, 2);
+// console.log(nextPrime(1)); //, 2);
+// console.log(nextPrime(2)); //, 3);
+// console.log(nextPrime(3)); //, 5);
+// console.log(nextPrime(5)); //, 7);
+// console.log(nextPrime(11)); //, 13);
+// console.log(nextPrime(17)); //, 19);
+// console.log(nextPrime(2971)); //, 2999);
 
 // function reverseWords(str) {
 //   const arrFromStr = str
@@ -294,3 +295,32 @@ console.log(nextPrime(2971)); //, 2999);
 // console.log(reverseWords("apple")); //, 'elppa');
 // console.log(reverseWords("a b c d")); //, 'a b c d');
 // console.log(reverseWords("double  spaced  words")); //, 'elbuod  decaps  sdrow');
+
+// ргб ту хекс
+// function rgb(r, g, b) {
+//   // complete this function
+
+//   let first =
+//     (r < 0 && (0).toString(16)) ||
+//     (r > 255 && (255).toString(16)) ||
+//     r.toString(16);
+//   let second =
+//     (g < 0 && (0).toString(16)) ||
+//     (g > 255 && (255).toString(16)) ||
+//     g.toString(16);
+//   let third =
+//     (b < 0 && (0).toString(16)) ||
+//     (b > 255 && (255).toString(16)) ||
+//     b.toString(16);
+
+//   return `${first.length === 1 ? "0" + first : first}${
+//     second.length === 1 ? "0" + second : second
+//   }${third.length === 1 ? "0" + third : third}`.toUpperCase();
+// }
+
+// console.log(rgb(0, 0, -20)); //, "000000";
+// console.log(rgb(0, 0, 0)); //, "000000";
+// console.log(rgb(300, 255, 255)); //, "FFFFFF";
+// console.log(rgb(173, 255, 47)); //, "ADFF2F";
+// console.log(rgb(199, 145, 7)); //, "ADFF2F";
+// // 199,145,7
