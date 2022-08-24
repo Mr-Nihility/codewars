@@ -261,3 +261,23 @@
 // console.log(solution("abcdef")); // ["ab", "cd", "ef"];
 // console.log(solution("abcdefg")); // ["ab", "cd", "ef", "g_"];
 // console.log(solution("")); // []);
+
+// function nextPrime(n) {
+//   n++;
+//   for (let i = n; i >= 0; i++) {
+//     if ((i % i === 0 && i !== 1) || i / 2 !== 1) {
+//       return i;
+//     }
+
+//     if (i > 100000) return;
+//   }
+// }
+
+// console.log(nextPrime(0)); //, 2);
+// console.log(nextPrime(1)); //, 2);
+// console.log("aa", nextPrime(2)); //, 3);
+// console.log("aa", nextPrime(3)); //, 5);
+// console.log(nextPrime(5)); //, 7);
+// console.log(nextPrime(11)); //, 13);
+// console.log(nextPrime(17)); //, 19);
+// console.log(nextPrime(2971)); //, 2999);
