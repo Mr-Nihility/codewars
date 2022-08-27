@@ -610,26 +610,39 @@ The function should return true if that is the case, and else false. Letter comp
 // console.log(countPositivesSumNegatives([0, 0]));
 
 // function isAN(value) {
+//   if (value === null) {
+//     return false;
+//   }
 //   if (Array.isArray(value)) {
 //     return false;
 //   }
-//   if (typeof +value === "number") {
+//   if (typeof value === "object") {
 //     return !Number.isNaN(+value);
 //   }
+//   if (typeof value === "number") {
+//     return !Number.isNaN(+value);
+//   }
+//   return false;
 // }
 
 // console.log(isAN(new Number(1)));
 // console.log(isAN(new Number("a")));
-// console.log(+new Number(1));
 // console.log(isAN([]));
 // console.log(isAN(true));
+// console.log(isAN("1"));
+// console.log(isAN(false));
+// console.log(isAN(1));
+// console.log(isAN(null));
+// console.log(+new Number("1"));
+// console.log(+[]);
+// console.log(null === null);
 
 // String.prototype.isUpperCase = function () {
 //   return this.split(" ").every((el) => el === el.toUpperCase());
 // };
 // console.dir(String);
 
-// const a = "CASe".isUpperCase();
+// const a = "CAST".isUpperCase();
 // console.log(a);
 
 // function toCamelCase(str) {
