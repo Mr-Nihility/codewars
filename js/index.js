@@ -668,7 +668,7 @@ function duplicateCount(text) {
   });
 
   for (const key in counterObj) {
-    if (counterObj[key] >= 2) {
+    if (counterObj[key] > 1) {
       counter += 1;
     }
   }
