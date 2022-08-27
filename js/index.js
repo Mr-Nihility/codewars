@@ -654,30 +654,30 @@ The function should return true if that is the case, and else false. Letter comp
 // console.log(toCamelCase("The-Stealth-Warrior")); //, "TheStealthWarrior", "toCamelCase'The-Stealth-Warrior'
 // console.log(toCamelCase("A-B-C")); //, "ABC", "toCamelCase('A-B-C') did not return correct value"
 
-function duplicateCount(text) {
-  //...
-  const arrStr = text.toLowerCase().split("");
-  const counterObj = {};
-  let counter = 0;
-  arrStr.forEach((el) => {
-    if (counterObj[el]) {
-      counterObj[el] += 1;
-    } else {
-      counterObj[el] = 1;
-    }
-  });
+// function duplicateCount(text) {
+//   //...
+//   const arrStr = text.toLowerCase().split("");
+//   const counterObj = {};
+//   let counter = 0;
+//   arrStr.forEach((el) => {
+//     if (counterObj[el]) {
+//       counterObj[el] += 1;
+//     } else {
+//       counterObj[el] = 1;
+//     }
+//   });
 
-  for (const key in counterObj) {
-    if (counterObj[key] > 1) {
-      counter += 1;
-    }
-  }
-  return counter;
-}
+//   for (const key in counterObj) {
+//     if (counterObj[key] > 1) {
+//       counter += 1;
+//     }
+//   }
+//   return counter;
+// }
 
-console.log(duplicateCount("")); //, 0
-console.log(duplicateCount("abcde")); //, 0
-console.log(duplicateCount("aabbcde")); //, 2
-console.log(duplicateCount("aabBcde")); //, 2,"should ignore case"
-console.log(duplicateCount("Indivisibility")); //, 1
-console.log(duplicateCount("Indivisibilities")); //, 2, "characters may not be adjacent
+// console.log(duplicateCount("")); //, 0
+// console.log(duplicateCount("abcde")); //, 0
+// console.log(duplicateCount("aabbcde")); //, 2
+// console.log(duplicateCount("aabBcde")); //, 2,"should ignore case"
+// console.log(duplicateCount("Indivisibility")); //, 1
+// console.log(duplicateCount("Indivisibilities")); //, 2, "characters may not be adjacent
