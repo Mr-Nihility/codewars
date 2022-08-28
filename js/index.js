@@ -708,3 +708,33 @@ The function should return true if that is the case, and else false. Letter comp
 // console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35])); //, 3;
 // console.log(findEvenIndex([1, 2, 3, 4, 5, 6])); //, -1;
 // console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35])); //, -1;
+
+// function arrange(s) {
+//   // your code here
+//   let arr = [...s];
+//   let t = [];
+
+//   for (let i = 0; i < arr.length / 2; i++) {
+//     if (i % 2 === 0) {
+//       t = t.concat([arr[0 + i], arr[arr.length - (1 + i)]]);
+//     } else {
+//       t = t.concat([arr[arr.length - (1 + i)], arr[0 + i]]);
+//     }
+//   }
+//   // while (arr.length > 0) {
+//   //   let firstEL = arr.shift();
+//   //   let lastEl = arr.pop();
+//   //   firstEL !== undefined ? t.push(firstEL) : firstEL;
+//   //   lastEl !== undefined ? t.push(lastEl) : lastEl;
+//   //   arr.reverse();
+//   // }
+//   return arr.length % 2 === 0 ? t : t.slice(0, t.length - 1);
+// }
+
+// console.log(arrange([1, 2])); //, [1, 2]);
+// console.log(arrange([4, 3, 2])); //, [4, 2, 3]);
+// console.log(arrange([9, 7, -2, 8, 5, -3, 6, 5, 1])); //, [9, 1, 5, 7, -2, 6, -3, 8, 5]);
+// console.log(arrange([1])); //, [1]);
+// console.log(arrange([])); //, []);
+// console.log(arrange([2, 4, 3, 4])); //, [2, 4, 3, 4]);
+// console.log(arrange([-8, -9, 5, 4, -5, -9, 7])); //, [-8, 7, -9, -9, 5, -5, 4]);
