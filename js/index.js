@@ -738,3 +738,15 @@ The function should return true if that is the case, and else false. Letter comp
 // console.log(arrange([])); //, []);
 // console.log(arrange([2, 4, 3, 4])); //, [2, 4, 3, 4]);
 // console.log(arrange([-8, -9, 5, 4, -5, -9, 7])); //, [-8, 7, -9, -9, 5, -5, 4]);
+
+function strrrrr(str, num) {
+  const arrCodes = [];
+
+  for (let i = 0; i < str.length; i++) {
+    arrCodes.push(str.charCodeAt(i) + num); //UTF
+  }
+
+  return String.fromCharCode(...arrCodes);
+}
+
+console.log(strrrrr("abc", 0));
